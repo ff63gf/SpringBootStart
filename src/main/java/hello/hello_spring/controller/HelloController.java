@@ -1,0 +1,18 @@
+package hello.hello_spring.controller;
+
+import org.springframework.ui.Model;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+// Controller 역할을 담당하는 클래스를 지정하기 위한 annotation
+@Controller
+public class HelloController {
+
+    // View의 hello 기능에 반응하기 위한 annotation
+    @GetMapping("hello")
+    public String hello(Model model) {
+        // Model 클래스는 MVC 패턴에서의 그 Model을 의미
+        model.addAttribute("data", "hello!!");
+        return "hello";
+    }
+}
