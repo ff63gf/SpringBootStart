@@ -13,6 +13,7 @@ public class HelloController {
     public String hello(Model model) {
         // Model 클래스는 MVC 패턴에서의 그 Model을 의미
         model.addAttribute("data", "hello!!");
+        // 여기서 hello는 View에 있는 hello.html 파일을 의미함
         return "hello";
     }
 }
